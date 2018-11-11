@@ -1,0 +1,31 @@
+{
+  "name": "brandonkal/githooks-demo",
+  "description": "Debug githooks",
+  "type": "project",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Brandon Kalinowski",
+      "role": ""
+    }
+  ],
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://wpackagist.org"
+    }
+  ],
+  "prefer-stable": true,
+  "config": {
+    "sort-packages": true
+  },
+  "require-dev": {
+    "brandonkal/phpcs-neutron-refined": "^1.9.3",
+    "squizlabs/php_codesniffer": "^3.3"
+  },
+  "scripts": {
+    "test": [
+      "phpcs $(git ls-files public/app/*.php) --basepath=public/app --report=summary"
+    ]
+  }
+}

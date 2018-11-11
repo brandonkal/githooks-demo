@@ -1,0 +1,9 @@
+#!/bin/bash
+
+# CHANGED_FILES=$(git diff --cached --diff-filter=ACMR --name-only | grep .php$)
+CHANGED_FILES=$(echo "$STAGED_FILES" | grep .php$ )
+
+if [[ -n $CHANGED_FILES ]]; then
+    # shellcheck disable=SC2086
+    vendor/bin/phpcs --basepath="public/app" --no-colors $CHANGED_FILES
+fi

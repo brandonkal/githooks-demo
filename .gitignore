@@ -1,0 +1,39 @@
+# Ignore Notes
+notes*.txt
+notes*.md
+*.bak
+
+### Global Default Rules ###
+# MacOS / Windows
+.DS_Store
+Thumbs.db
+
+# More Rules
+*.log
+backups/
+test.php
+
+## Vagrant and Ansible ##
+.vagrant
+*.retry
+*.hash
+.vault_pass
+__pycache__
+
+## Dev Certificates and dhparams.pem ##
+*.pem
+*.cert
+*.key
+
+## Code ##
+# Visual Studio Code - https://code.visualstudio.com/
+.settings/
+.vscode/
+tsconfig.json
+jsconfig.json
+.idea/
+
+## Composer ##
+composer.phar
+vendor/
+### End Global Default Rules ###
